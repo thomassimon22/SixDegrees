@@ -1,0 +1,54 @@
+/*********************************************************
+ * Homework 5: graph traversal
+ * Comp 15 Spring 2019 
+ * 
+ * Author: Matias Korman
+ * Edited by: Thomas Simon
+ *
+ *********************************************************/
+
+This homework assignment contains a partial implementation of Graph BFS traversal.
+
+
+main.cpp                : main driver of the project. Creates and 'run's an instance of SixDegrees 
+Graph.cpp               : graph class with extra helping tools to run DFS
+Graph.h                 : interface of graph class above
+LinkedList.cpp          : simple template linked list class used for DFS
+LinkedList.h            : interface of Linked list class above
+NodeType.h              : interface of Nodetype class (a simple struct used in the linked list class)
+Stack.cpp               : simple template stack class used for DFS
+Stack.h                 : interface of Stack class above
+Queue.cpp               : simple template queue class used for DFS
+Queue.h                 : interface of Queue class above
+actors.txt              : sample list of actors and the movies they have been in
+test_input.txt          : sample test input for the algorithm
+the_sixdegrees          : reference implementation for students to use as reference
+README                  : this file
+
+Note: the code is not complete on purpose. Students must create several files as implement some functions in Graph
+      class as well as the main driver.
+
+Acknowledgements: Most notably, my friend David helped me understand the data structure and bulleted some tips via whiteboard on how I could write more efficient code
+
+Purpose: The purpose of this project is be able to play six degrees of kevin bacon with any two actors name based on the database
+
+Files I've Written / Edited:
+(1) README is the file that explains what everything in my function does
+    it has been provided for me
+(2) Graph.cpp has beed edited to include big three and other helper functions
+(3) SixDegrees.cpp has been edited to create, fill the board, and run the game 
+(4) Actor.cpp is the file which allows to manipulation of actors in the data 		structure
+(5)	main.cpp is the blueprint function for running the program which calls
+	the public functions in SixDegrees.cpp
+(6) Makefile is the file which compiles the code
+(7) unittests is the file used to test all my code using a testing file
+    with the intention of ensuring edge case have the correct responses
+
+Compiling & Running: To compile and run the program, just type make and ./sixdegrees
+
+Data Structures: The data structure I used for this project was a graph, each vertex itself actually being an actor, and edges being movies actors are in, which up to one edge of one movie connecting two actors
+
+Testing: To test that this program worked as intended I used a testing file and attempted several edge cases to ensure they all worked. Such edge cases include checking that the same actor couldnt be checked against themself, among others. The outcome of testing was to ensure there were no bugs in my program. One such bug was a segfault as a result of checking two actors, which I fixed. I also used valgrind to avoid memory leaks and ensure I was properly deleting the graph.
+
+
+
